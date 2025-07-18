@@ -1,7 +1,7 @@
 import os
 os.environ["TIKTOKEN_CACHE_DIR"] = "/tmp"
 import streamlit as st
-#from llama_index.llms.gemini import Gemini
+from llama_index.llms.gemini import Gemini
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.gemini import GeminiEmbedding
 import nltk
