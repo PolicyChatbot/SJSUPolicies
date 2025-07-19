@@ -39,24 +39,24 @@ def load_data():
         The context for all questions are SJSU University Policies. Whenver possible, include a quotation from the provided policies to illustrate your point, and provide the policy number for each policy.
         Respond using a friendly but direct tone, similar to a librarian in a renowned library.""",
         api_key = st.secrets.google_gemini_key,
-        safe = [
-    {
-        "category": "HARM_CATEGORY_HARASSMENT",
-        "threshold": "BLOCK_ONLY_HIGH",
-    },
-    {
-        "category": "HARM_CATEGORY_HATE_SPEECH",
-        "threshold": "BLOCK_ONLY_HIGH",
-    },
-    {
-        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-        "threshold": "BLOCK_ONLY_HIGH",
-    },
-    {
-        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-        "threshold": "BLOCK_ONLY_HIGH",
-    },
-],
+    #    safe = [
+    #{
+    #    "category": "HARM_CATEGORY_HARASSMENT",
+    #    "threshold": "BLOCK_ONLY_HIGH",
+    #},
+    #{
+    #    "category": "HARM_CATEGORY_HATE_SPEECH",
+    #    "threshold": "BLOCK_ONLY_HIGH",
+    #},
+    #{
+    #    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+    #    "threshold": "BLOCK_ONLY_HIGH",
+    #},
+    #{
+    #    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+    #    "threshold": "BLOCK_ONLY_HIGH",
+    #},
+#],
     )
  
 
