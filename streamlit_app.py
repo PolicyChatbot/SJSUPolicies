@@ -39,24 +39,24 @@ def load_data():
         The context for all questions are SJSU University Policies. Whenver possible, include a quotation from the provided policies to illustrate your point, and provide the policy number for each policy.
         Respond using a friendly but direct tone, similar to a librarian in a renowned library.""",
         api_key = st.secrets.google_gemini_key,
-    #    safe = [
-    #{
-    #    "category": "HARM_CATEGORY_HARASSMENT",
-    #    "threshold": "BLOCK_ONLY_HIGH",
-    #},
-    #{
-    #    "category": "HARM_CATEGORY_HATE_SPEECH",
-    #    "threshold": "BLOCK_ONLY_HIGH",
-    #},
-    #{
-    #    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-    #    "threshold": "BLOCK_ONLY_HIGH",
-    #},
-    #{
-    #    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-    #    "threshold": "BLOCK_ONLY_HIGH",
-    #},
-#],
+        safe = [
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_ONLY_HIGH",
+    },
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_ONLY_HIGH",
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_ONLY_HIGH",
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_ONLY_HIGH",
+    },
+],
     )
  
 
@@ -87,7 +87,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
         try:
             response_stream = st.session_state.chat_engine.stream_chat(prompt)
         except:
-            st.error("We got an error from Google Gemini - this may mean the question had a risk of producing a harmful response. Consider asking the question in a different way.")        
+            st.error("We got an error from Google Gemini - this may mean the question had a risk of producing a harmful response. Consider asking the question in a different way. There is no response.")        
         if response_stream != "":
             with st.spinner("waiting"):
                 try:
