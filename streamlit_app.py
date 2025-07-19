@@ -18,7 +18,7 @@ if "messages" not in st.session_state.keys():  # Initialize the chat messages hi
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Hi there! I'm Polly, and I know everything about SJSU's University Policies. How can I help?",
+            "content": "Hi there! I'm Polly, and I know everything about SJSU's University Polly-cies. How can I help?",
         }
     ]
 
