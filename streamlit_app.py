@@ -10,8 +10,8 @@ import nltk
 def get_stopwords():
     nltk.download('stopwords')
 
-st.set_page_config(page_title="Chat with Polly about the SJSU University Policies", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-st.title("Polly, SJSU's University Policy Chatbot")
+st.set_page_config(page_title="Polly, SJSU's University Policy Chatbot", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.title("Chat with Polly about the SJSU University Policies")
 
 
 if "messages" not in st.session_state.keys():  # Initialize the chat messages history
